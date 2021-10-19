@@ -713,7 +713,7 @@ where
     /// Returns a clone of a cached push service.
     ///
     /// If no service is yet cached, it will create and cache one.
-    fn push_service(&self) -> Result<HyperPushService, Error> {
+    pub fn push_service(&self) -> Result<HyperPushService, Error> {
         self.cache.push_service.get(|| {
             let signal_servers = match &self.state {
                 State::Registration { signal_servers, .. }

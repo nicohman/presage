@@ -1,5 +1,5 @@
 mod cache;
-mod config;
+pub mod config;
 mod errors;
 mod manager;
 
